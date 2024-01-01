@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            margin: 0%;
+        }
+        #container{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        
+        #LOG{
+            background-color: beige;
+            height: 600px;
+            width: 400px;
+            position: absolute; 
+            z-index: 2;
+            margin-top: -100px;
+            box-shadow: 20px 20px 14px #363635d7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #SIGN{
+            background-color: rgb(200, 158, 240);
+            height: 400px;
+            width: 900px;
+            position: relative;
+            z-index:1; 
+            margin-left: -90px;
+            box-shadow: 20px 20px 14px #342750;
+        }
+        #email,#password{
+            height:50px;
+            width: 300px;
+            border: 0px;
+            border-radius: 3px;
+            margin: 20px;
+            border: 1px solid #47380b51;
+            box-shadow: 7px 7px 4px #53524a;
+        }
+        #btn{
+            border-radius: 5px;
+            box-shadow:  7px 7px 4px #f9829abe;
+            background-color: rgb(255, 88, 121);
+            border: 0px;
+            height: 50px;
+            width:100px    
+        }
+        #button{
+            margin: 50px;
+        }
+        #SIGN{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+        }
+        #text{
+            color: rgb(255, 255, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            font-weight: 600;
+            margin-right: 25px;
+            margin-bottom: 30px;
+        }
+        #newbtn{
+            margin-right: 150px;
+            border-radius: 5px;
+            background-color:rgb(200, 158, 240);
+            border: 2px solid #ffffff;
+            height: 50px;
+            width:100px 
+        }
+        p{
+            text-decoration: none;
+            font-size: larger;
+            font-weight: 500;
+        }
+        @media screen and (max-width: 1023px) {
+            #LOG{
+            background-color: beige;
+            height: 500px;
+            width: 300px;
+            }
+            #SIGN{
+            background-color: rgb(200, 158, 240);
+            height: 300px;
+            width: 700px;
+            margin-left: -20px;
+            }
+            #email,#password{
+            height:30px;
+            width: 200px;
+            }
+            #text{
+            font-size: x-large;
+            font-weight: 500;
+            margin-right: 50px;
+        }
+    }
+     @media screen and (min-width: 430px) and (max-width:740px){
+        #big {
+            display: flex;
+            flex-direction: coulmn;
+            justify-content: center;
+            align-items: center;
+        }
+        #email,#password{
+            height:30px;
+            width: 320px;
+            }
+            #LOG{
+                width: 90%;
+                height: 60%;
+                margin-top: -180px;
+            }
+            #SIGN{
+                margin-top: 340px;
+                height: 80px;
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-right: -15px;
+            }
+            #text{
+            
+            font-size: medium;
+            font-weight: 400;
+            padding-left: 20px;
+            padding-top: 23px;
+            }
+            #newbtn{
+            margin-right: 20px;
+            border-radius: 5px;
+            background-color:rgb(200, 158, 240);
+            border: 2px solid #ffffff;
+            height: 40px;
+            width:80px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            text-decoration: none;
+            font-size: small;
+            font-weight: 300;
+           
+       }
+    }
+        
+        @media screen and (max-width: 740px) {
+            #big {
+            display: flex;
+            flex-direction: coulmn;
+            justify-content: center;
+            align-items: center;
+        }
+            #LOG{
+                width: 90%;
+                height: 60%;
+                margin-top: -180px;
+            }
+            #SIGN{
+                margin-top: 340px;
+                height: 80px;
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-right: -15px;
+            }
+            #text{
+            
+            font-size: medium;
+            font-weight: 400;
+            padding-left: 20px;
+            padding-top: 23px;
+            }
+            #newbtn{
+            margin-right: 20px;
+            border-radius: 5px;
+            background-color:rgb(200, 158, 240);
+            border: 2px solid #ffffff;
+            height: 40px;
+            width:80px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            text-decoration: none;
+            font-size: small;
+            font-weight: 300;
+           
+       }
+    }
+    
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="big">
+        <div id="LOG">
+            <div><input style="text-align: center;" type="email" onfocus="this.value=''" value="XYZ@gmail.com" id="email"></div>
+            <div> <input style="text-align: center;" type="password" onfocus="this.value=''" name="password" value="password" id="password"></div>
+            <div id="button"><button style="color: rgb(255, 255, 255); font-size:medium; " id="btn"  type="button">Log in</button></div>
+            </div>
+            <div id="SIGN">
+                <div id="text">Don't have an account ?</div>
+                <div><button id="newbtn"><p style="color: white;">Sign Up</p></button></div>
+            </div>
+        </div>
+    </div>     
+    </div>
+
+
+    <script>
+        let validMail=  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        let validPass =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&^]{8,20}$/;
+
+         const a= document.getElementById("email");
+         const b= document.getElementById("password");
+         const c = document.getElementById("btn");
+         const d = document.getElementById("newbtn");
+         const e = document.getElementById("SIGN");
+         const f = document.getElementById("big");
+         const logContainer = document.getElementById("LOG");
+         const CheckAndPrint = function(){
+            if(!a.value.match(validMail)){
+                alert ("ENTER A VALID EMAIL");
+            }
+            else if(!b.value.match(validPass)){
+                alert("ENTER A VALID PASSWORD min 8-20 characters containing uppercase,lowercase,numbers and symbols");
+            }
+            else{
+                alert("LOGIN/SIGN UP SUCCESSFULL");
+            }
+         };
+         const ChangeLayout = function(){
+            e.remove();
+            f.style.display=("flex");
+            f.style.justifyContent=("center");
+            f.style.alignItems=("center");
+            c.innerText = "Sign Up";
+            c.addEventListener('click' , CheckAndPrint);
+
+         };
+
+         c.addEventListener('click' , CheckAndPrint);
+         d.addEventListener('click',ChangeLayout);
+
+    </script>
+    
+</body>
+</html>
